@@ -1,0 +1,354 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 26px;
+    color: #000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.navbar .nav-link {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffc107;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar .nav-link:hover {
+    background-color: #ffc107;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffc107;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    animation: slideInFromTop 1.2s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero p {
+
+
+    font-size: 22px;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out 1s forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Carousel Styling */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
+}
+
+.carousel-inner img:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.carousel-item h5 {
+    font-size: 32px;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item p {
+    font-size: 20px;
+    font-weight: 400;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item:hover h5 {
+    transform: scale(1.05);
+}
+
+.carousel-item:hover p {
+    opacity: 0.8;
+}
+
+/* Event Card Section */
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.event-card img:hover {
+    transform: scale(1.1);
+}
+
+.event-card h5 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 0 20px;
+    color: #333;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.event-card p {
+    font-size: 16px;
+    margin: 10px 20px;
+    color: #777;
+    transition: opacity 0.3s ease;
+}
+
+.event-card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.event-card .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    background-color: #f0f0f0;
+    position: relative;
+    animation: fadeInSection 1s ease-out;
+}
+
+section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+section p {
+    font-size: 18px;
+    text-align: center;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInText 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ffc107;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    margin-top: 40px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #000;
+}
+
+/* Smooth Scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 22px;
+    }
+
+    .navbar .nav-link {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .event-card {
+        margin-bottom: 20px;
+    }
+
+    .event-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item h5 {
+        font-size: 26px;
+    }
+
+    .carousel-item p {
+        font-size: 14px;
+    }
+
+    .event-card h5 {
+        font-size: 18px;
+    }
+
+    .event-card p {
+        font-size: 14px;
+    }
+}
